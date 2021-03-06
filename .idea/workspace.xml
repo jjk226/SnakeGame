@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="082c66b2-7547-484f-ba91-876cb9249e31" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1pJt1lbsRqZmEIiH7BHB8XwL1JL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="13" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="SnakeGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="082c66b2-7547-484f-ba91-876cb9249e31" name="Default Changelist" comment="" />
+      <created>1614912808034</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614912808034</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="123" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614913023172">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="123" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1614913023172" />
+    <state x="472" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1615011986873">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="472" y="128" key="#com.intellij.ide.util.MemberChooser/0.23.1280.777@0.23.1280.777" timestamp="1615011986873" />
+    <state width="1148" height="197" key="GridCell.Tab.0.bottom" timestamp="1615058827431">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1148" height="197" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1615058827431" />
+    <state width="1148" height="197" key="GridCell.Tab.0.center" timestamp="1615058827429">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1148" height="197" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1615058827429" />
+    <state width="1148" height="197" key="GridCell.Tab.0.left" timestamp="1615058827427">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1148" height="197" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1615058827427" />
+    <state width="1148" height="197" key="GridCell.Tab.0.right" timestamp="1615058827430">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1148" height="197" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1615058827430" />
+    <state x="160" y="23" key="SettingsEditor" timestamp="1614913534346">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="160" y="23" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1614913534346" />
+  </component>
+</project>
