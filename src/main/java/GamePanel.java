@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 public class GamePanel extends JPanel implements ActionListener {
 
-    public static final int SCREEN_WIDTH = 600;
-    public static final int SCREEN_HEIGHT = 600;
-    public static final int UNIT_SIZE = 25;
+    public static final int SCREEN_WIDTH = 500;
+    public static final int SCREEN_HEIGHT = 500;
+    public static final int UNIT_SIZE = 20;
     public static final int GAME_UNITS = (SCREEN_WIDTH * SCREEN_HEIGHT)/UNIT_SIZE;
     public static final int DELAY = 75;
     public final int[] x = new int[GAME_UNITS];
@@ -34,31 +34,15 @@ public class GamePanel extends JPanel implements ActionListener {
 
     @Override
     public void paintComponent(Graphics g) {
-        System.out.println(">> running paintComponent method");
         super.paintComponent(g);
         this.draw(g);
-        
-        Scanner scanner = new Scanner(System.in);
-
-        while (true) {
-            System.out.print(">> input: ");
-            String input = scanner.nextLine();
-
-            if (input.equals("1")) {
-                System.out.println(">> calling draw method");
-                this.draw(g);
-                continue;
-            }
-
-            if (input.equals("x")) {
-                System.out.println("end loop");
-                break;
-            }
-        }
     }
 
     public void startGame() {
-
+        this.newApple();
+        running = true;
+        timer = new Timer(DELAY, this);
+        timer.start();
     }
 
     public void draw(Graphics g) {
@@ -67,10 +51,16 @@ public class GamePanel extends JPanel implements ActionListener {
             g.drawLine(i * UNIT_SIZE, 0, i * UNIT_SIZE, SCREEN_HEIGHT);
             g.drawLine(0, i * UNIT_SIZE, SCREEN_WIDTH, i * UNIT_SIZE);
         }
-        int randomX = random.nextInt(UNIT_SIZE) * UNIT_SIZE;
-        int randomY = random.nextInt(UNIT_SIZE) * UNIT_SIZE;
 
-        g.fillRect(randomX , randomY, 25, 25);
+        g.setColor(Color.RED);
+        g.fillOval(appleX , appleY, UNIT_SIZE, UNIT_SIZE);
+
+    }
+
+    public void newApple() {
+        this.appleX = random.nextInt((int)SCREEN_WIDTH/UNIT_SIZE) * UNIT_SIZE;
+        this.appleY = random.nextInt((int)SCREEN_HEIGHT/UNIT_SIZE) * UNIT_SIZE;
+
     }
 
     public void move() {
