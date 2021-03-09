@@ -20,6 +20,8 @@ public class GamePanel extends JPanel implements ActionListener {
     int applesEaten;
     int appleX;
     int appleY;
+    int obstacleX;
+    int obstacleY;
     char direction = 'D';
     boolean running = false;
     Timer timer;
@@ -43,6 +45,7 @@ public class GamePanel extends JPanel implements ActionListener {
 
     public void startGame() {
         this.newApple();
+        this.newObstacle();
         running = true;
         timer = new Timer(DELAY, this);
         timer.start();
@@ -58,6 +61,9 @@ public class GamePanel extends JPanel implements ActionListener {
 
             g.setColor(Color.RED);
             g.fillOval(appleX, appleY, UNIT_SIZE, UNIT_SIZE);
+
+            g.setColor(Color.ORANGE);
+            g.fillRect(obstacleX, obstacleY, UNIT_SIZE, UNIT_SIZE);
 
             //draw the snake
             for (int i = 0; i < bodyParts; i++) {
@@ -78,6 +84,18 @@ public class GamePanel extends JPanel implements ActionListener {
     public void newApple() {
         this.appleX = random.nextInt((int)SCREEN_WIDTH/UNIT_SIZE) * UNIT_SIZE;
         this.appleY = random.nextInt((int)SCREEN_HEIGHT/UNIT_SIZE) * UNIT_SIZE;
+
+    }
+
+    public void newObstacle() {
+        while(true) {
+            this.obstacleX = random.nextInt((int)SCREEN_WIDTH/UNIT_SIZE) * UNIT_SIZE;
+            this.obstacleY = random.nextInt((int)SCREEN_HEIGHT/UNIT_SIZE) * UNIT_SIZE;
+
+            if (obstacleX != appleX && obstacleY != appleY) {
+                break;
+            }
+        }
 
     }
 
@@ -110,16 +128,22 @@ public class GamePanel extends JPanel implements ActionListener {
             bodyParts++;
             applesEaten++;
             newApple();
+            newObstacle();
             DELAY -= 5;
             this.timer.setDelay(DELAY);
         }
     }
 
     public void checkCollisions() {
-        //check head-on-body collision
         for (int i = 1; i < bodyParts; i++) {
+            //check head-to-body collision
             if (x[0] == x[i] && y[0] == y[i]) {
                 System.out.println("Collision detected");
+                running = false;
+            }
+
+            if (x[0] == obstacleX && y[0] == obstacleY) {
+                System.out.println("Collided with obstacle");
                 running = false;
             }
         }
@@ -145,9 +169,9 @@ public class GamePanel extends JPanel implements ActionListener {
         FontMetrics metrics = g.getFontMetrics();
 
         g.drawString("game over", SCREEN_WIDTH/2 - metrics.stringWidth("game over")/2,
-                SCREEN_HEIGHT/2 - metrics.getHeight()/2 - 12);
+                SCREEN_HEIGHT/2 - metrics.getHeight()/2 - g.getFont().getSize());
         g.drawString("apples: " + applesEaten, SCREEN_WIDTH/2 - metrics.stringWidth("apples:  ")/2,
-                SCREEN_HEIGHT/2 - metrics.getHeight()/2 + 12);
+                SCREEN_HEIGHT/2 - metrics.getHeight()/2 + g.getFont().getSize());
     }
 
     public class MyKeyAdapter extends KeyAdapter {
