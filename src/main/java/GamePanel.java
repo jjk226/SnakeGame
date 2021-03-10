@@ -20,8 +20,9 @@ public class GamePanel extends JPanel implements ActionListener {
     int applesEaten;
     int appleX;
     int appleY;
-    int obstacleX;
-    int obstacleY;
+    public static int numberOfObstacles = 10;
+    public static int[] obstacleX = new int[numberOfObstacles];
+    public static int[] obstacleY = new int[numberOfObstacles];
     char direction = 'D';
     boolean running = false;
     Timer timer;
@@ -62,8 +63,10 @@ public class GamePanel extends JPanel implements ActionListener {
             g.setColor(Color.RED);
             g.fillOval(appleX, appleY, UNIT_SIZE, UNIT_SIZE);
 
-            g.setColor(Color.ORANGE);
-            g.fillRect(obstacleX, obstacleY, UNIT_SIZE, UNIT_SIZE);
+            for (int i = 0; i < numberOfObstacles; i++) {
+                g.setColor(Color.ORANGE);
+                g.fillRect(obstacleX[i], obstacleY[i], UNIT_SIZE, UNIT_SIZE);
+            }
 
             //draw the snake
             for (int i = 0; i < bodyParts; i++) {
@@ -88,12 +91,13 @@ public class GamePanel extends JPanel implements ActionListener {
     }
 
     public void newObstacle() {
-        while(true) {
-            this.obstacleX = random.nextInt((int)SCREEN_WIDTH/UNIT_SIZE) * UNIT_SIZE;
-            this.obstacleY = random.nextInt((int)SCREEN_HEIGHT/UNIT_SIZE) * UNIT_SIZE;
+        for (int i = 0; i < numberOfObstacles; i++) {
+            obstacleX[i] = random.nextInt(SCREEN_WIDTH/UNIT_SIZE) * UNIT_SIZE;
+            obstacleY[i] = random.nextInt(SCREEN_HEIGHT/UNIT_SIZE) * UNIT_SIZE;
 
-            if (obstacleX != appleX && obstacleY != appleY) {
-                break;
+            if (obstacleX[i] == appleX && obstacleY[i] == appleY) {
+                obstacleX[i] = -1;
+                obstacleY[i] = -1;
             }
         }
 
@@ -141,12 +145,16 @@ public class GamePanel extends JPanel implements ActionListener {
                 System.out.println("Collision detected");
                 running = false;
             }
+        }
 
-            if (x[0] == obstacleX && y[0] == obstacleY) {
-                System.out.println("Collided with obstacle");
+        //check if head touches obstacle
+        for (int i = 0; i < numberOfObstacles; i++) {
+            if (x[0] == obstacleX[i] && y[0] == obstacleY[i]) {
+                System.out.println("Collision detected");
                 running = false;
             }
         }
+
         //check if head touches border
         if (x[0] == SCREEN_WIDTH  || x[0] < 0) {
             System.out.println("Collision detected");
