@@ -25,6 +25,7 @@ public class GamePanel extends JPanel implements ActionListener {
     public static int[] obstacleY = new int[numberOfObstacles];
     char direction = 'D';
     boolean running = false;
+    boolean gameOver = false;
     Timer timer;
     Random random;
 
@@ -32,6 +33,7 @@ public class GamePanel extends JPanel implements ActionListener {
         System.out.println(">> GamePanel constructor");
         this.random = new Random();
         this.setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
+        this.setLocation(0, 0);
         this.setBackground(Color.BLACK);
         this.setFocusable(true);
         this.addKeyListener(new MyKeyAdapter());
@@ -50,6 +52,7 @@ public class GamePanel extends JPanel implements ActionListener {
         running = true;
         timer = new Timer(DELAY, this);
         timer.start();
+        System.out.println(">> delay: " + DELAY);
     }
 
     public void draw(Graphics g) {
@@ -178,8 +181,15 @@ public class GamePanel extends JPanel implements ActionListener {
 
         g.drawString("game over", SCREEN_WIDTH/2 - metrics.stringWidth("game over")/2,
                 SCREEN_HEIGHT/2 - metrics.getHeight()/2 - g.getFont().getSize());
+
         g.drawString("apples: " + applesEaten, SCREEN_WIDTH/2 - metrics.stringWidth("apples:  ")/2,
                 SCREEN_HEIGHT/2 - metrics.getHeight()/2 + g.getFont().getSize());
+
+        g.drawString("Press Enter to Restart", SCREEN_WIDTH/2 - metrics.stringWidth("Press Enter to Restart")/2,
+                SCREEN_HEIGHT/2 - metrics.getHeight()/2 + 3 * (g.getFont().getSize()));
+
+        this.gameOver = true;
+
     }
 
     public class MyKeyAdapter extends KeyAdapter {
@@ -218,9 +228,35 @@ public class GamePanel extends JPanel implements ActionListener {
                     }
                     break;
                 }
+
+            }
+            if (gameOver == true && e.getKeyCode() == KeyEvent.VK_ENTER) {
+                reset();
             }
 
         }
+
+        private void reset() {
+            GamePanel.this.reset();
+        }
+
+    }
+
+    private void reset() {
+        gameOver = false;
+        direction = 'D';
+        applesEaten = 0;
+        DELAY = 175;
+        bodyParts = 6;
+
+        for (int i = 0; i < GAME_UNITS; i++) {
+            x[i] = 0;
+            y[i] = 0;
+        }
+
+        this.repaint();
+        this.startGame();
+
     }
 
 
