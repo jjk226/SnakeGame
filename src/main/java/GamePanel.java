@@ -9,25 +9,25 @@ import static java.awt.font.TextAttribute.FONT;
 
 public class GamePanel extends JPanel implements ActionListener {
 
-    public static final int SCREEN_WIDTH = 500;
-    public static final int SCREEN_HEIGHT = 500;
+    public static final int SCREEN_WIDTH = 300;
+    public static final int SCREEN_HEIGHT = 300;
     public static final int UNIT_SIZE = 10;
     public static final int GAME_UNITS = (SCREEN_WIDTH * SCREEN_HEIGHT)/UNIT_SIZE;
     public static int DELAY = 175;
-    public final int[] x = new int[GAME_UNITS];
-    public final int[] y = new int[GAME_UNITS];
-    int bodyParts = 6;
-    int applesEaten;
-    int appleX;
-    int appleY;
-    public static int numberOfObstacles = 10;
-    public static int[] obstacleX = new int[numberOfObstacles];
-    public static int[] obstacleY = new int[numberOfObstacles];
-    char direction = 'D';
-    boolean running = false;
-    boolean gameOver = false;
-    Timer timer;
-    Random random;
+    private final int[] x = new int[GAME_UNITS];
+    private final int[] y = new int[GAME_UNITS];
+    private int bodyParts = 6;
+    private int applesEaten;
+    private int appleX;
+    private int appleY;
+    private static int numberOfObstacles = 10;
+    private static int[] obstacleX = new int[numberOfObstacles];
+    private static int[] obstacleY = new int[numberOfObstacles];
+    private char direction = 'D';
+    private boolean running = false;
+    private boolean gameOver = false;
+    private Timer timer;
+    private Random random;
 
     public GamePanel() {
         System.out.println(">> GamePanel constructor");
@@ -80,6 +80,9 @@ public class GamePanel extends JPanel implements ActionListener {
             g.setFont(new Font("SansSerif", Font.PLAIN, 12));
             g.setColor(Color.WHITE);
             g.drawString("apples: " + applesEaten, UNIT_SIZE/2, g.getFont().getSize());
+
+            //draw parasite
+            Worm.draw(g);
 
         } else {
             this.gameOver(g);
