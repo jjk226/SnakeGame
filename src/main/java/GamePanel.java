@@ -9,8 +9,8 @@ import static java.awt.font.TextAttribute.FONT;
 
 public class GamePanel extends JPanel implements ActionListener {
 
-    public static final int SCREEN_WIDTH = 300;
-    public static final int SCREEN_HEIGHT = 300;
+    public static final int SCREEN_WIDTH = 350;
+    public static final int SCREEN_HEIGHT = 350;
     public static final int UNIT_SIZE = 10;
     public static final int GAME_UNITS = (SCREEN_WIDTH * SCREEN_HEIGHT)/UNIT_SIZE;
     public static int DELAY = 175;
@@ -28,6 +28,8 @@ public class GamePanel extends JPanel implements ActionListener {
     private boolean gameOver = false;
     private Timer timer;
     private Random random;
+    private Worm worm = new Worm();
+    private Snake snake = new Snake();
 
     public GamePanel() {
         System.out.println(">> GamePanel constructor");
@@ -72,6 +74,7 @@ public class GamePanel extends JPanel implements ActionListener {
             }
 
             //draw the snake
+
             for (int i = 0; i < bodyParts; i++) {
                 g.setColor(Color.GREEN);
                 g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
@@ -81,8 +84,9 @@ public class GamePanel extends JPanel implements ActionListener {
             g.setColor(Color.WHITE);
             g.drawString("apples: " + applesEaten, UNIT_SIZE/2, g.getFont().getSize());
 
+
             //draw parasite
-            Worm.draw(g);
+            worm.draw(g);
 
         } else {
             this.gameOver(g);
@@ -268,6 +272,7 @@ public class GamePanel extends JPanel implements ActionListener {
         //performs action when running == true;
         if (running) {
             this.move();
+            this.worm.move();
             this.checkApple();
             this.checkCollisions();
         }

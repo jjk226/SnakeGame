@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="082c66b2-7547-484f-ba91-876cb9249e31" name="Default Changelist" comment="&quot;added obstacles&quot;">
+    <list default="true" id="082c66b2-7547-484f-ba91-876cb9249e31" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GameFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/GamePanel$MyKeyAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GamePanel$MyKeyAdapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GamePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,12 +73,20 @@
       <option name="project" value="LOCAL" />
       <updated>1615351772415</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;added Worm class&quot;">
+      <created>1615774424628</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615774424638</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;added obstacles&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;added obstacles&quot;" />
+    <MESSAGE value="&quot;added Worm class&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;added Worm class&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="123" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614913023172">
@@ -92,54 +97,54 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="472" y="128" key="#com.intellij.ide.util.MemberChooser/0.23.1280.777@0.23.1280.777" timestamp="1615522896517" />
-    <state x="0" y="23" width="752" height="777" key="CommitChangelistDialog2" timestamp="1615518976866">
+    <state x="0" y="23" width="752" height="777" key="CommitChangelistDialog2" timestamp="1615774423875">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="0" y="23" width="752" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1615518976866" />
-    <state width="1148" height="245" key="GridCell.Tab.0.bottom" timestamp="1615764664391">
+    <state x="0" y="23" width="752" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1615774423875" />
+    <state width="1148" height="111" key="GridCell.Tab.0.bottom" timestamp="1615946579512">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1148" height="111" key="GridCell.Tab.0.bottom/-1280.164.1280.777/0.23.1920.1057@-1280.164.1280.777" timestamp="1615156308214" />
-    <state width="1148" height="245" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1615764664391" />
-    <state width="1148" height="245" key="GridCell.Tab.0.center" timestamp="1615764664390">
+    <state width="1148" height="111" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1615946579512" />
+    <state width="1148" height="111" key="GridCell.Tab.0.center" timestamp="1615946579511">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1148" height="111" key="GridCell.Tab.0.center/-1280.164.1280.777/0.23.1920.1057@-1280.164.1280.777" timestamp="1615156308213" />
-    <state width="1148" height="245" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1615764664390" />
-    <state width="1148" height="245" key="GridCell.Tab.0.left" timestamp="1615764664389">
+    <state width="1148" height="111" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1615946579511" />
+    <state width="1148" height="111" key="GridCell.Tab.0.left" timestamp="1615946579510">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1148" height="111" key="GridCell.Tab.0.left/-1280.164.1280.777/0.23.1920.1057@-1280.164.1280.777" timestamp="1615156308211" />
-    <state width="1148" height="245" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1615764664389" />
-    <state width="1148" height="245" key="GridCell.Tab.0.right" timestamp="1615764664391">
+    <state width="1148" height="111" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1615946579510" />
+    <state width="1148" height="111" key="GridCell.Tab.0.right" timestamp="1615946579512">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1148" height="111" key="GridCell.Tab.0.right/-1280.164.1280.777/0.23.1920.1057@-1280.164.1280.777" timestamp="1615156308213" />
-    <state width="1148" height="245" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1615764664391" />
-    <state width="1148" height="245" key="GridCell.Tab.1.bottom" timestamp="1615764664394">
+    <state width="1148" height="111" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1615946579512" />
+    <state width="1148" height="245" key="GridCell.Tab.1.bottom" timestamp="1615943206291">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1148" height="245" key="GridCell.Tab.1.bottom/0.23.1280.777@0.23.1280.777" timestamp="1615764664394" />
-    <state width="1148" height="245" key="GridCell.Tab.1.center" timestamp="1615764664393">
+    <state width="1148" height="245" key="GridCell.Tab.1.bottom/0.23.1280.777@0.23.1280.777" timestamp="1615943206291" />
+    <state width="1148" height="245" key="GridCell.Tab.1.center" timestamp="1615943206289">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1148" height="245" key="GridCell.Tab.1.center/0.23.1280.777@0.23.1280.777" timestamp="1615764664393" />
-    <state width="1148" height="245" key="GridCell.Tab.1.left" timestamp="1615764664392">
+    <state width="1148" height="245" key="GridCell.Tab.1.center/0.23.1280.777@0.23.1280.777" timestamp="1615943206289" />
+    <state width="1148" height="245" key="GridCell.Tab.1.left" timestamp="1615943206289">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1148" height="245" key="GridCell.Tab.1.left/0.23.1280.777@0.23.1280.777" timestamp="1615764664392" />
-    <state width="1148" height="245" key="GridCell.Tab.1.right" timestamp="1615764664394">
+    <state width="1148" height="245" key="GridCell.Tab.1.left/0.23.1280.777@0.23.1280.777" timestamp="1615943206289" />
+    <state width="1148" height="245" key="GridCell.Tab.1.right" timestamp="1615943206290">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1148" height="245" key="GridCell.Tab.1.right/0.23.1280.777@0.23.1280.777" timestamp="1615764664394" />
+    <state width="1148" height="245" key="GridCell.Tab.1.right/0.23.1280.777@0.23.1280.777" timestamp="1615943206290" />
     <state x="160" y="23" key="SettingsEditor" timestamp="1614913534346">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="160" y="23" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1614913534346" />
-    <state x="259" y="151" key="Vcs.Push.Dialog.v2" timestamp="1615351775465">
+    <state x="259" y="151" key="Vcs.Push.Dialog.v2" timestamp="1615774433088">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="259" y="151" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1615351775465" />
+    <state x="259" y="151" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1615774433088" />
     <state x="426" y="338" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615774400576">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -148,5 +153,9 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="425" y="145" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1280.777@0.23.1280.777" timestamp="1615522864665" />
+    <state x="20" y="112" key="new project wizard" timestamp="1615946890828">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="20" y="112" key="new project wizard/0.23.1280.777@0.23.1280.777" timestamp="1615946890828" />
   </component>
 </project>
